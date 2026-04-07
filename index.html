@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion WiFi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #ffffff;
+            font-family: 'Fredoka', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .portal-card {
+            text-align: center;
+            padding: 30px;
+            max-width: 450px;
+        }
+
+        h1 {
+            color: #a8bbfe;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        p {
+            color: #888;
+            font-size: 1.2em;
+            margin-bottom: 35px;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 1.2em;
+            color: #444;
+            cursor: pointer;
+            margin-bottom: 40px;
+        }
+
+        input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            accent-color: #a8bbfe;
+            cursor: pointer;
+        }
+
+        .btn-connect {
+            background-color: #a8bbfe;
+            color: white;
+            border: none;
+            padding: 15px 45px;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(168, 187, 254, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portal-card" id="main-card">
+        <h1>Voulez Vous Vous Connecter a SFR_CB8D</h1>
+        <p>Bienvenue au PinkParadise</p>
+
+        <label class="checkbox-container">
+            <input type="checkbox" id="security-check">
+            Exotic Wifi Security
+        </label>
+
+        <button class="btn-connect" onclick="validate()">SE CONNECTER</button>
+    </div>
+
+    <script>
+        function validate() {
+            const cb = document.getElementById('security-check');
+            if (cb.checked) {
+                // Remplacement du contenu par ton message final
+                document.getElementById('main-card').innerHTML = `
+                    <h1 style="color: #a8bbfe;">Vous êtes connecté</h1>
+                    <p>Bonne Journée</p>
+                `;
+            } else {
+                alert("Veuillez cocher la case Exotic Wifi Security.");
+            }
+        }
+    </script>
+
+</body>
+</html>
